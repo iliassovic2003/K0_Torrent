@@ -18,7 +18,7 @@ std::string                 sha1_hex(const std::string& input) {
     std::ostringstream          ss;
     std::array<uint8_t, 20>     result = sha1_raw(input);
 
-    for (uint8_t byte : digest)
+    for (uint8_t byte : result)
         ss << std::hex << std::setw(2) << std::setfill('0') << (int)byte;
 
     return ss.str();

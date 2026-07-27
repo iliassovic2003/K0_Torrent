@@ -211,7 +211,7 @@ static void test_empty_throws() {
 /* ────────────────── main ────────────────── */
 
 int main() {
-    std::cout << "running test_bencode\n\n";
+    std::cout << std::endl<< "───> running test_bencode\n\n";
 
     std::cout << "integers:\n";
     test_integer_positive();

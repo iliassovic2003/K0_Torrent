@@ -4,6 +4,10 @@
 # include <iomanip>
 # include <sstream>
 # include <openssl/sha.h>
+# include <string>
+# include <cstring>
+# include <array>
+# include <cstdint>
 # include <vector>
 # include <cstddef>
 

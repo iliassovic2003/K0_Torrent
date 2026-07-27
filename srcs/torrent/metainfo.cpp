@@ -2,7 +2,7 @@
 #include "../../include/bencode/bencode.hpp"
 #include "../../include/crypto/sha1.hpp"
 
-static std::string read_file(const std::string& path) {
+static std::string                          read_file(const std::string& path) {
 
     std::ifstream file(path, std::ios::binary);
     if (!file.is_open())
@@ -40,7 +40,7 @@ static std::vector<std::array<uint8_t, 20>> split_pieces(const std::string& raw)
     return pieces;
 }
 
-static std::vector<FileInfo> parse_files(const BencodeValue::List& list) {
+static std::vector<FileInfo>                parse_files(const BencodeValue::List& list) {
     std::vector<FileInfo> files;
 
     for (const auto& entry : list) {
@@ -70,7 +70,7 @@ static std::vector<std::vector<std::string>> parse_announce_list(const BencodeVa
     return result;
 }
 
-TorrentFile parse_torrent(const std::string& path) {
+TorrentFile                                 parse_torrent(const std::string& path) {
     TorrentFile tf;
 
     std::string raw = read_file(path);
